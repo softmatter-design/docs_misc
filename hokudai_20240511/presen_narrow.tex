@@ -67,7 +67,7 @@
 \title
 {高分子化学講座出身者が\\物理と化学の狭間で考えてきたこと}
 \subtitle{～コウモリ研究者の戯言～}
-\author[佐々木]{佐々木裕}
+\author[佐々木]{佐々木裕\thanks{hiroshi.sasaki2@gmail.com}}
 \institute[21期]{21期 （元 東亞合成株式会社）}
 \date{May 11, 2024}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -331,46 +331,115 @@
 \subsection{構造明確なネットワークの検討}
 
 \begin{frame}
-\frametitle{ゴムの強靭性}
+	\frametitle{力学的ヒステリシスと破壊エネルギー}
+	\vspace{-1mm}
+		% \begin{block}{}
+			\begin{columns}[T, onlytextwidth]
+				\column{.7\linewidth}
+					\begin{itemize}
+						\item 力学的ヒステリシスロス
+							\begin{itemize}
+								\item \textcolor{red}{Unloading} 時の応力が低下
+								\item ヒステリシスロス$\Rightarrow$エネルギー散逸
+								\item \alert{破壊エネルギーと正の相関}\footnote{
+									\scriptsize{K.A.Grosch, J.A.C.Harwood, A.R.Payne, \\Rub. Chem. Tech., 41, 1157(1968)}
+								}
+							\end{itemize}
+						\item ヒステリシスロスの由来は？\footnote{
+							\scriptsize{A.R.Payne, J.Poly.Sci.:Sympo., 48, 169(1974)}
+						}
+						\begin{itemize}
+							\item \alert{粘弾性効果}
+							\item 伸張結晶化
+							\item フィラー添加の効果
+						\end{itemize}
+					\end{itemize}
+				\column{.3\linewidth}
+				\begin{center}
+					\vspace{-2mm}
+					\includegraphics[width=\textwidth]{hysteresis_curve.png}
 
-\begin{exampleblock}{Andrews 理論}
-\begin{columns}[totalwidth=1\textwidth]
-\column{.7\textwidth}
-    \begin{itemize}
-    \item
-    クラック先端の応力場の考察より、
-        \begin{itemize}
-        \item
-        Loading 場と、Unloading 場の差が重要。
-        \item
-        この差はヒステリシスに由来
-        \end{itemize}	
-    \item
-    応力集中を低減 $\Rightarrow$ 強靭さの起源。
-    \end{itemize}
-\column{.3\textwidth}
-\centering
-\includegraphics[width=20mm]{crack.png}
-\end{columns}
-
-\footnotesize
-{Andrews, E. H. and Fukahori, Y., J. of Mat. Sci., 12, 1307 (1977)}
-\end{exampleblock}
-
-\begin{columns}[totalwidth=1\textwidth]
-\column{.5\textwidth}
-Mullins 効果
-    \begin{itemize}
-        \item 歪み起因のヒステリシス
-        \item 内部構造の変化
-        \item {\color{red} 可逆} or 不可逆
-    \end{itemize}
-\column{.5\textwidth}
-    \centering
-    \includegraphics[width=35mm]{Mullins_Efct.eps}
-\end{columns}
-
+					\vspace{5mm}
+					\includegraphics[width=\textwidth]{hyst_break2.png}
+				\end{center}
+			\end{columns}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Andrews 理論}
+	\vspace{-2mm}
+	\begin{exampleblock}{Andrews 理論}
+		\begin{columns}[totalwidth=1\textwidth]
+			\column{.68\textwidth}
+			\begin{itemize}
+			\item クラック近傍の応力場\footnote{
+					Andrews, E. H. and Fukahori, Y., \\J. of Mat. Sci., 12, 1307 (1977)
+					}
+					\begin{itemize}
+						\item \textcolor{blue}{Loading 場}と\textcolor{red}{Unloading 場}
+						\item クラック進展時に遷移
+					\end{itemize}
+			\item ヒステリシスロスを有する材料では
+				\begin{itemize}
+				\item
+				\alert{この差}が、全体の変形に要した\\エネルギーの多くを\alert{散逸}
+				\item
+			鎖の破断へのエネルギーが低減 \\$\Rightarrow$ \alert{強靭さの起源。}
+				\end{itemize}	
+			\item \textcolor{green}{実験的に、$\Phi$ を求めている。}
+			% \item \alert{ミクロな緩和現象}がマクロな耐久性向上と繋がる？
+			\end{itemize}
+		
+			\column{.3\textwidth}
+			\centering
+			\includegraphics[width=.7\textwidth]{rubber_crack.png}
+			\vspace{3mm}
+			\includegraphics[width=.7\textwidth]{crack.png}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}
+% \frametitle{ゴムの強靭性}
+
+% \begin{exampleblock}{Andrews 理論}
+% \begin{columns}[totalwidth=1\textwidth]
+% \column{.7\textwidth}
+%     \begin{itemize}
+%     \item
+%     クラック先端の応力場の考察より、
+%         \begin{itemize}
+%         \item
+%         Loading 場と、Unloading 場の差が重要。
+%         \item
+%         この差はヒステリシスに由来
+%         \end{itemize}	
+%     \item
+%     応力集中を低減 $\Rightarrow$ 強靭さの起源。
+%     \end{itemize}
+% \column{.3\textwidth}
+% \centering
+% \includegraphics[width=20mm]{crack.png}
+% \end{columns}
+
+% \footnotesize
+% {Andrews, E. H. and Fukahori, Y., J. of Mat. Sci., 12, 1307 (1977)}
+% \end{exampleblock}
+
+% \begin{columns}[totalwidth=1\textwidth]
+% \column{.5\textwidth}
+% Mullins 効果
+%     \begin{itemize}
+%         \item 歪み起因のヒステリシス
+%         \item 内部構造の変化
+%         \item {\color{red} 可逆} or 不可逆
+%     \end{itemize}
+% \column{.5\textwidth}
+%     \centering
+%     \includegraphics[width=35mm]{Mullins_Efct.eps}
+% \end{columns}
+
+% \end{frame}
     
 % \begin{frame}
 % \frametitle{ターゲット}
@@ -633,8 +702,8 @@ ESA-CF 法 (Electrostatic Self-assembly and Covalent Fixation)\\
             \item 落穂拾いは役に立つ。
             \begin{itemize}
                 \item オキセタンの再発見 1960-
-                \item 超分子ネットワーク 1990-
                 \item ゴムの強靭性 1960-
+                \item 超分子ネットワーク 1990-
             \end{itemize}
         \end{itemize}
     \end{boxnote}
